@@ -1,6 +1,6 @@
 public class Zombie extends Monster {
     public Zombie (String name) {
-        super(name + "The Zombie", 5);
+        super(name + " The Zombie", 5);
     }
 
     @Override
