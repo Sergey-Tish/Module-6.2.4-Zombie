@@ -8,7 +8,7 @@ public class Monster {
         System.out.println();
     }
     public Monster(String name) {
-        this(name, 5);
+        this(name, 1);
         System.out.println();
     }
 
