@@ -1,5 +1,5 @@
 public class Zombie extends Monster {
-    String growl = "Raaaauuughhhh";
+    public static String scream = "Raaaauuughhhh";
 
     public Zombie (String name) {
         super(name + " the Zombie", 5);
@@ -7,9 +7,18 @@ public class Zombie extends Monster {
 
     @Override
     public void growl() {
-        System.out.print(growl);
+        System.out.print(scream);
         super.growl();
     }
+
+    public void growl(boolean bool) {
+        if (bool) {
+            System.out.print(scream.toUpperCase());
+        } else {
+            growl();
+        }
+    }
+
     public void attack() {
         super.attack();
         growl();
@@ -22,8 +31,9 @@ public class Zombie extends Monster {
         Zombie zombie2 = new Zombie("Bob");
         zombie2.attack();
         zombie2.growl();
-        Monster monster = new Monster("Bobiken", 10);
-        monster.attack();
-        monster.growl();
+        System.out.println();
+        zombie1.growl();
+        zombie1.growl(true);
+        zombie1.growl(false);
     }
 }
