@@ -22,7 +22,7 @@ public class Zombie extends Monster {
     public void attack() {
         super.attack();
         growl();
-    }
+    } //77
 
     public static void main(String[] args) {
         Zombie zombie1 = new Zombie("Alice");
