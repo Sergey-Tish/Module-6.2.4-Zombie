@@ -35,5 +35,8 @@ public class Zombie extends Monster {
         zombie1.growl();
         zombie1.growl(true);
         zombie1.growl(false);
+
+        Zombie zombie3 = new Zombie("Sombie");
+        zombie3.attack();
     }
 }
