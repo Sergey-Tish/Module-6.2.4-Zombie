@@ -5,7 +5,12 @@ public class Zombie extends Monster {
 
 
     public Zombie (String name) {
-        super(name + " the Zombie", 5);
+        this(name + " the Zombie", 0,0);
+    }
+    public Zombie (String name, int x, int y) {
+        super(name, 5);
+        pointX = x;
+        pointY = y;
     }
 
     @Override
