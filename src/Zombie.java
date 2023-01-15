@@ -1,5 +1,8 @@
 public class Zombie extends Monster {
-    public static String scream = "Raaaauuughhhh";
+    public final static String scream = "Raaaauuughhhh";
+    private int pointX = 0;
+    private int pointY = 0;
+
 
     public Zombie (String name) {
         super(name + " the Zombie", 5);
@@ -41,5 +44,6 @@ public class Zombie extends Monster {
         zombie3.growl();
         zombie3.growl(true);
         zombie3.growl(false);
+
     }
 }
