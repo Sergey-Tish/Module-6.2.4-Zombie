@@ -1,7 +1,11 @@
 public class Zombie extends Monster {
     public final static String scream = "Raaaauuughhhh";
-    private int pointX = 0;
-    private int pointY = 0;
+    private int pointX;
+    private int pointY;
+
+    {
+        pointY = 0;
+    }
 
 
     public Zombie (String name) {
@@ -31,6 +35,10 @@ public class Zombie extends Monster {
         super.attack();
         growl();
     } //7777
+    public void moveTo(int x, int y) {
+        pointX = x;
+        pointY = y;
+    }
 
     public static void main(String[] args) {
         Zombie zombie1 = new Zombie("Alice");
@@ -51,6 +59,6 @@ public class Zombie extends Monster {
         zombie3.growl(false);
 
         Zombie zombie4 = new Zombie("Fasty Mike", 20, 20);
-
+        zombie4.moveTo(30,30);
     }
 }
