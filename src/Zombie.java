@@ -28,9 +28,10 @@ public class Zombie extends Monster {
         super.growl();
     }
 
-    public void growl(boolean bool) {
-        if (bool) {
+    public void growl(boolean loud) {
+        if (loud) {
             System.out.print(scream.toUpperCase());
+            super.growl();
         } else {
             growl();
         }

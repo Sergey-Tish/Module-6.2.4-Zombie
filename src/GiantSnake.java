@@ -1,7 +1,7 @@
 public class GiantSnake extends Monster {
 
 
-    public final static String scream = "Raaaauuughhhh";
+    public final static String scream = "Ssssss";
     private int pointX;
     private int pointY;
     int route = 0;
@@ -22,9 +22,10 @@ public class GiantSnake extends Monster {
         super.growl();
     }
 
-    public void growl(boolean bool) {
-        if (bool) {
+    public void growl(boolean loud) {
+        if (loud) {
             System.out.print(scream.toUpperCase());
+            super.growl();
         } else {
             growl();
         }
@@ -33,23 +34,6 @@ public class GiantSnake extends Monster {
     public void attack() {
         super.attack();
         growl();
-    }
-
-    public void turnRight(int degrees) {
-        turnLeft(-degrees);
-    }
-
-    public void turnLeft(int degrees) {
-        route = (route + degrees) % 360;
-    }
-
-    public void flyTo(int x, int y) {
-        pointX = x;
-        pointY = y;
-    }
-
-    public void move(int way) {
-        int trend = route / 180;
-        pointX += way/route;
+        System.out.println("     ...and hid in the grass");
     }
 }
