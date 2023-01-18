@@ -48,7 +48,7 @@ public class Zombie extends Monster {
 
     public void move(int way) {
         int trend = route / 180;
-        pointX += way;
+        pointX += way/route;
     }
 
     public static void main(String[] args) {
