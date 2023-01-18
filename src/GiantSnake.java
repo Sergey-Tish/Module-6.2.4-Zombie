@@ -1,6 +1,4 @@
 public class GiantSnake extends Monster {
-
-
     public final static String scream = "Ssssss";
     private int pointX;
     private int pointY;
